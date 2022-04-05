@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./App.css";
 import Header from "./components/header";
 import Pagination from "./components/pagination";
 import { getMoviesList, getMoviesSearchList } from "./api/movies";

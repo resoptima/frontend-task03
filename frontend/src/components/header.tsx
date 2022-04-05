@@ -50,6 +50,7 @@ export const Header: React.FunctionComponent<ToggleProps> = ({
             textAlign: "center",
             color: "#1976d2",
             fontSize: 16,
+            paddingRight: 2,
             "@media (max-width:780px)": {
               display: "none",
             },
@@ -60,8 +61,7 @@ export const Header: React.FunctionComponent<ToggleProps> = ({
 
         <Box
           sx={{
-            width: 300,
-            maxWidth: "100%",
+            width: 200,
           }}
         >
           <TextField
@@ -72,7 +72,11 @@ export const Header: React.FunctionComponent<ToggleProps> = ({
             onKeyDown={onEnterKeyDown}
           />
         </Box>
-        <Box>
+        <Box
+          sx={{
+            width: 310,
+          }}
+        >
           {searchInput && (
             <Button
               onClick={() => handleClear()}
@@ -81,9 +85,6 @@ export const Header: React.FunctionComponent<ToggleProps> = ({
                 border: "none",
                 marginLeft: 5,
                 background: "none",
-                borderRadius: 20,
-                height: 60,
-                width: 60,
               }}
             >
               <ClearIcon />
@@ -96,9 +97,6 @@ export const Header: React.FunctionComponent<ToggleProps> = ({
               border: "none",
               marginLeft: 5,
               background: "none",
-              borderRadius: 20,
-              height: 60,
-              width: 60,
             }}
           >
             <SearchIcon />
